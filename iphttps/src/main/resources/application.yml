@@ -24,17 +24,18 @@ ip-proxy:
   numTestsPerEvictionRun: 3
   # 获取ip 方式 0 为免费 1 为付费 2 为免费和付费同时进行
   iPType: 2
-  # IP代理请求路径
-  httpPath: "http://webapi.http.zhimacangku.com/getip"
+  # IP代理请求路径 某某第三方ip代理
+  httpPath: "http://"
   # IP代理请求参数
   httpProxy:
+  #所有的参数和对应的值 如下：
     num: "1"
     type: "2"
     pro: ""
     city: ""
     yys: "0"
     port: "1"
-    pack: "51524"
+    pack: "1111"
     amount: "1"
     ts: "1"
     ys: "1"

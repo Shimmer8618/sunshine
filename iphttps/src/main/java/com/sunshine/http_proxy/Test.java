@@ -6,6 +6,7 @@ import java.util.Map;
 import com.alibaba.fastjson.JSONObject;
 import com.sunshine.http_proxy.utils.HttpProxyConfig;
 
+
 public class Test {
 	public static void main(String[] args) {
 		Map<String, String> map = new HashMap<String, String>();
@@ -26,7 +27,7 @@ public class Test {
 		 map.put("pb", "4");
 		 map.put("mr", "1");
 		 map.put("regions", "");
-		 JSONObject zhima = HttpProxyClientLocat.getHttpClientProxyIpZhiMa8(new HttpProxyConfig());
+		 JSONObject zhima = HttpProxyClientLocat.getHttpClientProxyIp(new HttpProxyConfig());
 		 System.err.println(zhima.toString());
 		
 //		Map<String, String> map = new HashMap<String, String>();

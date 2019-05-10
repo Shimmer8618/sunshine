@@ -7,6 +7,11 @@ package com.sunshine.http_proxy.pool;
 
 import java.io.Serializable;
 
+/**
+ * ip对象基类
+ *
+ * @author xiangzi
+ */
 public class ProxyHost implements Serializable {
     /**
      * 序列化

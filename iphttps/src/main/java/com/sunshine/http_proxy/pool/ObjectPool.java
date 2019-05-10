@@ -6,6 +6,11 @@ import org.apache.commons.pool.impl.GenericObjectPool;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * 对象池操作工具
+ *
+ * @author xiangzi
+ */
 @SuppressWarnings({ "unchecked", "rawtypes" })
 public class ObjectPool {
 	public static Logger log = LoggerFactory.getLogger(ObjectPool.class);

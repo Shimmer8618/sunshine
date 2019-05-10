@@ -9,7 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-
+/**
+ * 定时任务
+ *
+ * @author xiangzi
+ */
 @Component
 public class Mkdirjob {
 	public static Logger log = LoggerFactory.getLogger(Mkdirjob.class);

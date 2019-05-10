@@ -13,6 +13,11 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.sunshine.http_proxy.utils.DateUtil;
 
+/**
+ * 对象池管理工厂
+ *
+ * @author xiangzi
+ */
 @SuppressWarnings({"unchecked", "rawtypes" })
 public class ObjectPoolFactory implements PoolableObjectFactory {
 	public static Logger log = LoggerFactory.getLogger(ObjectPoolFactory.class);
@@ -39,7 +44,7 @@ public class ObjectPoolFactory implements PoolableObjectFactory {
 
 	public Object makeObject() throws Exception {
 		synchronized (this){
-			JSONObject json = HttpProxyClientLocat.getHttpClientProxyIpZhiMa8(httpProxyConfig);
+			JSONObject json = HttpProxyClientLocat.getHttpClientProxyIp(httpProxyConfig);
 			Object object = JSON.parseObject(json.getJSONArray("data").getJSONObject(0).toString(), cls);
 			log.info("创建新IP对象："+object.toString());
 			return object;

@@ -25,6 +25,11 @@ import org.slf4j.LoggerFactory;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 
+/**
+ * 获取第三方代理ip和免费代理ip工具
+ *
+ * @author xiangzi
+ */
 @SuppressWarnings({"unchecked", "rawtypes"})
 public class HttpProxyClientLocat implements Runnable {
     public static Logger log = LoggerFactory.getLogger(HttpProxyClientLocat.class);
@@ -40,7 +45,7 @@ public class HttpProxyClientLocat implements Runnable {
      * @param map
      * @return
      */
-    public static JSONObject getHttpClientProxyIp2808(String path, Map<String, String> map) {
+    public static JSONObject getHttpClientProxyIp(String path, Map<String, String> map) {
         List list = new ArrayList<HashMap<String, String>>();
         JSONObject json = new JSONObject();
         do {
@@ -67,7 +72,7 @@ public class HttpProxyClientLocat implements Runnable {
      * @param httpProxyConfig
      * @return
      */
-    public static JSONObject getHttpClientProxyIpZhiMa8(HttpProxyConfig httpProxyConfig) {
+    public static JSONObject getHttpClientProxyIp(HttpProxyConfig httpProxyConfig) {
         hashMap.clear();
         JSONObject json = new JSONObject();
         if (httpProxyConfig.getiPType() == 0) {
@@ -382,7 +387,7 @@ public class HttpProxyClientLocat implements Runnable {
         map.put("pb", "4");
         map.put("mr", "1");
         map.put("regions", "");
-        JSONObject zhima = getHttpClientProxyIpZhiMa8(new HttpProxyConfig());
+        JSONObject zhima = getHttpClientProxyIp(new HttpProxyConfig());
         log.info(zhima.toString());
 
         // try {
